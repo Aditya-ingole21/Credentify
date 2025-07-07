@@ -45,8 +45,7 @@ contract DecentralizedCredentialSystem is AccessControl {
         string memory studentName,
         string memory courseName,
         string memory degree,
-        string memory ipfsHash
-    ) public onlyRole(UNIVERSITY_ROLE) {
+        string memory ipfsHash) public onlyRole(UNIVERSITY_ROLE) {
         _certificateIds.increment();
         uint256 newCertId = _certificateIds.current();
 
@@ -109,3 +108,15 @@ contract DecentralizedCredentialSystem is AccessControl {
         revokeRole(UNIVERSITY_ROLE, universityAddress);
     }
 }
+
+function getCertificatesByStudent(address studentWallet) public view returns (Certificate[] memory) {
+    uint256[] memory ids = studentToCertificates[studentWallet];
+    Certificate[] memory result = new Certificate[](ids.length);
+
+    for (uint256 i = 0; i < ids.length; i++) {
+        result[i] = certificates[ids[i]];
+    }
+
+    return result;
+}
+
