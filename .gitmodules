@@ -1,0 +1,3 @@
+[submodule "Credentify/lib/openzeppelin-contracts"]
+	path = Credentify/lib/openzeppelin-contracts
+	url = https://github.com/OpenZeppelin/openzeppelin-contracts
