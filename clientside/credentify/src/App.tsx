@@ -2,11 +2,11 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { Web3Provider, useWeb3 } from '../src/context/Web3Context';
-import { Navbar } from '../src/components/Navbar';
-import { Home } from '../src/pages/Home';
-import { UniversityDashboard } from '../src/pages/UniversityDashboard';
-import { StudentDashboard } from '../src/pages/StudentDashboard';
-import { VerifierDashboard } from '../src/pages/VarifierDashboard';
+import { Navbar } from './components/Navbar';
+import { Home } from './pages/Home';
+import { UniversityDashboard } from './pages/UniversityDashboard';
+import { StudentDashboard } from './pages/StudentDashboard';
+import { VerifierDashboard } from './pages/VarifierDashboard';
 
 // Protected Route Component
 const ProtectedRoute: React.FC<{ children: React.ReactNode; requireAuth?: boolean }> = ({ 
