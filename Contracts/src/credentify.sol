@@ -109,14 +109,14 @@ contract DecentralizedCredentialSystem is AccessControl {
     }
 }
 
-function getCertificatesByStudent(address studentWallet) public view returns (Certificate[] memory) {
-    uint256[] memory ids = studentToCertificates[studentWallet];
-    Certificate[] memory result = new Certificate[](ids.length);
+// function getCertificatesByStudent(address studentWallet) public view returns (Certificate[] memory) {
+//     uint256[] memory ids = studentToCertificates[studentWallet];
+//     Certificate[] memory result = new Certificate[](ids.length);
 
-    for (uint256 i = 0; i < ids.length; i++) {
-        result[i] = certificates[ids[i]];
-    }
+//     for (uint256 i = 0; i < ids.length; i++) {
+//         result[i] = certificates[ids[i]];
+//     }
 
-    return result;
-}
+//     return result;
+// }
 

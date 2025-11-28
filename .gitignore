@@ -1,0 +1,11 @@
+.env
+node_modules/
+dist/
+build/
+clientside/credentify/src/lib/Contract.ts
+clientside/credentify/src/components/Navbar.tsx
+clientside/credentify/src/pages/Home.tsx
+clientside/credentify/src/pages/StudentDashboard.tsx
+clientside/credentify/src/pages/UniversityDashboard.tsx 
+clientside/credentify/src/pages/VarifierDashboard.tsx
+clientside/credentify/src/components/ui/button.tsx
